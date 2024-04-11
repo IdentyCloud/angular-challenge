@@ -1,13 +1,16 @@
-import { Component, inject } from '@angular/core';
-import { ApiService } from './services/api.service';
+import { Component, OnInit } from '@angular/core';
+import { Store } from '@ngrx/store';
+
+import { requestUsers } from './store/actions/users.actions';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css'],
 })
-export class AppComponent {
-  #api = inject(ApiService);
+export class AppComponent implements OnInit {
+  constructor(private store: Store<any>) {}
 
-  // @TODO
+  ngOnInit(): void {
+    this.store.dispatch(requestUsers());
+  }
 }

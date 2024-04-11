@@ -29,6 +29,15 @@ dependencies:
   '@angular/router':
     specifier: ^14.2.0
     version: 14.3.0(@angular/common@14.3.0)(@angular/core@14.3.0)(@angular/platform-browser@14.3.0)(rxjs@7.8.1)
+  '@ngrx/effects':
+    specifier: ^14.3.0
+    version: 14.3.3(@angular/core@14.3.0)(@ngrx/store@14.3.3)(rxjs@7.8.1)
+  '@ngrx/store':
+    specifier: ^14.3.0
+    version: 14.3.3(@angular/core@14.3.0)(rxjs@7.8.1)
+  '@ngrx/store-devtools':
+    specifier: ^14.3.0
+    version: 14.3.3(@ngrx/store@14.3.3)(rxjs@7.8.1)
   rxjs:
     specifier: ^7.8.1
     version: 7.8.1
@@ -1877,6 +1886,41 @@ packages:
   /@leichtgewicht/ip-codec@2.0.5:
     resolution: {integrity: sha512-Vo+PSpZG2/fmgmiNzYK9qWRh8h/CHrwD0mo1h1DzL4yzHNSfWYujGTYsWGreD000gcgmZ7K4Ys6Tx9TxtsKdDw==}
     dev: true
+
+  /@ngrx/effects@14.3.3(@angular/core@14.3.0)(@ngrx/store@14.3.3)(rxjs@7.8.1):
+    resolution: {integrity: sha512-bP7rIHlu1KAj5Wm0TWR7Q8VlOQOBu8uiN/fDP3Lqi8FwVW6HOq9eBGcFwJGyqwVAmulsvLFB68MhpMYg2W78+w==}
+    peerDependencies:
+      '@angular/core': ^14.0.0
+      '@ngrx/store': 14.3.3
+      rxjs: ^6.5.3 || ^7.5.0
+    dependencies:
+      '@angular/core': 14.3.0(rxjs@7.8.1)(zone.js@0.11.8)
+      '@ngrx/store': 14.3.3(@angular/core@14.3.0)(rxjs@7.8.1)
+      rxjs: 7.8.1
+      tslib: 2.6.2
+    dev: false
+
+  /@ngrx/store-devtools@14.3.3(@ngrx/store@14.3.3)(rxjs@7.8.1):
+    resolution: {integrity: sha512-YQFFKYRnmREHCUb0aAaAgSXWKjZqV+5pmzsjW6HZ0GTKoy9R3JI7Miw0gplwkJpLO7Z3AFCuLQIpTs5ryAOwPQ==}
+    peerDependencies:
+      '@ngrx/store': 14.3.3
+      rxjs: ^6.5.3 || ^7.5.0
+    dependencies:
+      '@ngrx/store': 14.3.3(@angular/core@14.3.0)(rxjs@7.8.1)
+      rxjs: 7.8.1
+      tslib: 2.6.2
+    dev: false
+
+  /@ngrx/store@14.3.3(@angular/core@14.3.0)(rxjs@7.8.1):
+    resolution: {integrity: sha512-VhPDR2a5OQJfrVRah3vdJgL/F6UC8NU/X7lxKFqBW3NC+pmlIeFO/y8jLrZOKBXwG45tY9wrg15S70nEGoZtHA==}
+    peerDependencies:
+      '@angular/core': ^14.0.0
+      rxjs: ^6.5.3 || ^7.5.0
+    dependencies:
+      '@angular/core': 14.3.0(rxjs@7.8.1)(zone.js@0.11.8)
+      rxjs: 7.8.1
+      tslib: 2.6.2
+    dev: false
 
   /@ngtools/webpack@14.2.13(@angular/compiler-cli@14.3.0)(typescript@4.7.4)(webpack@5.76.1):
     resolution: {integrity: sha512-RQx/rGX7K/+R55x1R6Ax1JzyeHi8cW11dEXpzHWipyuSpusQLUN53F02eMB4VTakXsL3mFNWWy4bX3/LSq8/9w==}

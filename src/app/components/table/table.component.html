@@ -1,4 +1,4 @@
-<table class="table">
+<table class="table" *ngIf="!(loading$ | async); else loading">
   <thead>
     <tr>
       <th (click)="sortTable('firstname')">
@@ -18,7 +18,7 @@
   </thead>
 
   <tbody>
-    <tr *ngFor="let user of data;">
+    <tr *ngFor="let user of data$ | async">
       <td>{{ user.firstname }}</td>
       <td>{{ user.surname }}</td>
       <td>{{ user.username }}</td>
