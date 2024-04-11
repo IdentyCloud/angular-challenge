@@ -1,8 +1,16 @@
 import { createReducer, on } from '@ngrx/store';
 import { UserState } from '../../interfaces/user.state.interface';
-import { requestUsers, responseUsers } from '../actions/users.actions';
+import {
+  requestUsers,
+  responseUsers,
+  filterUsers,
+} from '../actions/users.actions';
 
-export const initialState: UserState = { loading: false, data: [] };
+export const initialState: UserState = {
+  loading: false,
+  data: [],
+  search: '',
+};
 
 export const usersReducer = createReducer(
   initialState,
@@ -11,5 +19,9 @@ export const usersReducer = createReducer(
   }),
   on(responseUsers, (state, { items }) => {
     return { ...state, loading: false, data: items };
-  })
+  }),
+  on(filterUsers, (state, { search }) => ({
+    ...state,
+    search,
+  }))
 );

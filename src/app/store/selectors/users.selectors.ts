@@ -6,7 +6,8 @@ export const selectItemsFeature = (state: AppState) => state.users;
 
 export const selectListUsers = createSelector(
   selectItemsFeature,
-  (state: UserState) => state.data
+  (state: UserState) =>
+    state.data.filter((user) => user.name.toLowerCase().includes(state.search))
 );
 
 export const selectLoading = createSelector(

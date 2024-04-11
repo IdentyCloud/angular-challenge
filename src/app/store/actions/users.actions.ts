@@ -7,3 +7,8 @@ export const responseUsers = createAction(
   '[GET | Users] RESPONSE',
   props<{ items: UserI[] }>()
 );
+
+export const filterUsers = createAction(
+  '[FILTER | Users] FILTER',
+  props<{ search: string }>()
+);

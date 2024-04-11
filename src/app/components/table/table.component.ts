@@ -7,7 +7,7 @@ import {
   selectListUsers,
 } from '../../store/selectors/users.selectors';
 
-import { UserI } from 'src/app/interfaces/user.interface';
+import { UserI } from '../../interfaces/user.interface';
 
 export interface ITableData extends Pick<any, 'id' | 'username' | 'email'> {
   firstname: string;
