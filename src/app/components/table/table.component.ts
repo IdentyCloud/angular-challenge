@@ -58,7 +58,24 @@ export class TableComponent implements OnInit, OnChanges {
   }
 
   private sortData(): void {
-    // @TODO
+    this.data$ = this.data$.pipe(
+      map((users: ITableData[]) => {
+        return users.sort((a, b) => {
+          const columnA = a[this.sortColumn];
+          const columnB = b[this.sortColumn];
+
+          if (columnA === columnB) {
+            return 0;
+          }
+
+          if (this.sortDirection === 'asc') {
+            return columnA < columnB ? -1 : 1;
+          } else {
+            return columnA > columnB ? -1 : 1;
+          }
+        });
+      })
+    );
   }
 
   sortTable(sortColumn: columns): void {
