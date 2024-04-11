@@ -1,0 +1,12 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0px 40px;
+  gap: 10px;
+  height: 100vh;
+}
+
+.filter {
+  align-self: flex-end;
+}

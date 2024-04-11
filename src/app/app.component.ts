@@ -6,6 +6,7 @@ import { requestUsers } from './store/actions/users.actions';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
+  styleUrls: ['./app.component.scss'],
 })
 export class AppComponent implements OnInit {
   constructor(private store: Store<any>) {}
